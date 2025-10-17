@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-    <title>Metadata management at CASD</title>
+    <title>Metadata management for G4H</title>
 
     <link rel="stylesheet" href="dist/reset.css"/>
     <link rel="stylesheet" href="dist/reveal.css"/>
@@ -35,19 +35,19 @@
                   filter: invert(1);
                 " class="demo-logo"/>
 
-                <h3>Metadata management at CASD</h3>
+                <h3>Metadata management for G4H</h3>
                 <p>
-                    <small>Datascience team</small>
+                    <small>Pengfei Liu</small>
                 </p>
             </section>
 
             <section data-transition="fade-in slide-out">
-                <h3>Goals</h3>
+                <h3>Overview</h3>
                 <ul>
-                    <li>What is data governance?</li>
-                    <li>What is metadata management?</li>
-                    <li>What are the popular metadata management tools?</li>
-                    <li>How to do metadata management at CASD?</li>
+                    <li>Introduction of metadata management</li>
+                    <li>What has been done?</li>
+                    <li>Future works</li>
+
                 </ul>
             </section>
         </section>
@@ -56,44 +56,14 @@
         <section data-transition="fade-in slide-out">
             <section>
                 <h3>What is data governance?</h3>
+                <img src="assets/introduction_of_data_governance_terms.jpg"
+                     alt="introduction_of_data_governance_terms.jpg" style="width:50%; height:auto;"/>
 
                 <p>
                     <em>Data governance</em> is a collection of <span style="font-weight: bold;">processes, roles, policies,
                     standards, and metrics</span> that ensure the data
                     <span style="font-weight: bold;">availability, usability, interoperability, security (i.e. confidentiality, integrity, privacy). </span>.
                 </p>
-
-                <p>
-                    It makes the use of data <span style="font-weight: bold;">consistent, trustworthy, effective and efficient</span>.
-                </p>
-
-
-            </section>
-            <section>
-                <h3>Data governance key concepts:</h3>
-                <img src="assets/introduction_of_data_governance_terms.jpg"
-                     alt="introduction_of_data_governance_terms.jpg" style="width:50%; height:auto;"/>
-
-                <ul>
-                    <small>
-                        <li class="fragment"><em>People</em>: who have the right to <span style="font-weight: bold;">make the decisions and accountable</span>
-                            for
-                            them.
-                        </li>
-                    </small>
-                    <small>
-                        <li class="fragment"><em>Policies</em>: what <span
-                                style="font-weight: bold;">decisions/rules</span> must be made to ensure effective
-                            management and use of data.
-                        </li>
-                    </small>
-                    <small>
-                        <li class="fragment"><em>Metrics</em>: how to <span
-                                style="font-weight: bold;">measure/evaluate</span> if <span style="font-weight: bold;">decisions/rules</span>
-                            are respected.
-                        </li>
-                    </small>
-                </ul>
 
                 <aside class="notes">
                     For example, if someone asks to access data, who can decide whether we grant access to the user or
@@ -243,7 +213,7 @@
 
             <section>
                 <h3>Administrative & Technical Metadata: How can the data asset be used?</h3>
-                <p>The <em>Temporal Metadata</em> defines usage constraints, format, and access methods. It guides safe,
+                <p>The <em>Administrative & Technical Metadata</em> defines usage constraints, format, and access methods. It guides safe,
                     legal, and efficient data usage.</p>
                 <ul>
                     <li>Format: CSV</li>
@@ -331,21 +301,7 @@
                     </li>
                 </ul>
             </section>
-            <!--Slide 6-3: Open metadata key features-->
-            <section>
-                <h3>Open metadata key features</h3>
-                <ul>
-                    <li class="fragment"><em>Metadata ingestion framework</em>: connectors, rest-API, python-SDK
-                    </li>
-                    <li class="fragment"><em>Data discovery</em>: Data searchable by name(i.e. table, column),
-                        description, tags, owner, etc.
-                    </li>
-                    <li class="fragment"><em>Lineage Tracking</em>: End-to-end data flow visualization.
-                    </li>
-                    <li class="fragment"><em>Collaboration</em>: Announcements, tasks, Activity feed, team conversations, etc.</li>
-                    <li class="fragment"><em>Governance</em>: Teams, roles, policies, etc.</li>
-                </ul>
-            </section>
+
             <section>
                 <h3>Advantage of Open metadata</h3>
                 <ul>
@@ -369,16 +325,37 @@
         <section data-transition="fade-in slide-out">
             <!-- Slide 7-1: overview      -->
             <section>
-                <h2>Open metadata in practice</h2>
+                <h2>What has been done?</h2>
                 <ul>
-                    <li>Metadata ingestion</li>
-                    <li>Use metadata to discover data</li>
-                    <li>Use collaboration features to improve metadata(audit).</li>
+                    <li>Open-Metadata deployment, backup, upgrade</li>
+                    <li>Metadata model v1(SNDS standard from CNAM)</li>
+                    <li>Metadata ingestion python API v1(compatible with OM-1.4.x)</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h2>What needs to be done?</h2>
+                <ul>
+                    <li>Automation of Open-Metadata deployment, backup, upgrade</li>
+                    <li>Metadata model v2(include simplified table and lineage, need help of Sofiane)</li>
+                    <li>Metadata ingestion python API v2(compatible with OM-1.9.x, Glossary, lineage support)</li>
                 </ul>
 
             </section>
 
         </section>
+
+         <section data-transition="fade-in slide-out">
+            <!-- Slide 7-1: overview      -->
+            <section>
+                <h2>DEMO</h2>
+                <ul>
+                    <li>Use Open-Metadata to discover datasets</li>
+                    <li>Use Open-Metadata collaboration to improve metadata </li>
+                </ul>
+            </section>
+         </section>
 
     </div>
 </div>
